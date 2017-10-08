@@ -5,7 +5,6 @@ html {
 body {
   display: block;
   background-image: url("../images/starfield.png");
-  height: 80vh;
   width: 100vw;
   overflow: hidden;
 }
@@ -25,34 +24,66 @@ a {
   color: #b4fff4;
 }
 
-.icon {
+.btn:hover .icon {
   -webkit-animation: rocket 1s linear infinite;
   animation: rocket 1s linear infinite;
 }
 
+.btn-ghost {
+  color: #b4fff4;
+  transition: all .5s linear;
+}
+
+.btn-ghost:hover {
+  color: #b4fff4;
+}
+
+a:focus {
+  outline: none;
+  outline-offset: 0;
+}
+
+.btn-ghost:focus {
+  background-color: transparent;
+  border-color: #90ccc3;
+  color: #b4fff4;
+}
+
 .btn {
   position: relative;
-  top: 2px;
+  top: 0;
   border-color: #90ccc3;
-  border-radius: 5px;
+  border-radius: 8px;
+  padding: 0;
+  transition: all .5s linear;
 }
 
 .btn:hover {
   background-color: rgba(180, 255, 244, .2);
   border-color: #90ccc3;
-  border-radius: 5px;
+  border-radius: 8px;
+  padding: 0;
 }
 
-@keyframes rocket {
+.p {
+  padding: 5px 10px;
+}
 
-  0% {
-    transform: translateY(-2px);
-  }
+.three-d {
+  height: 9px;
+  border-width: 3px 0 0;
+  border-color: #90ccc3;
+  border-style: solid;
+  padding: 0;
+  transition: all .5s linear;
+}
 
-  100% {
-    transform: translateY(2px);
-  }
+a:active .three-d {
+  height: 4px;
+}
 
+.btn-ghost:active {
+  top: 5px;
 }
 
 @keyframes rocket {
